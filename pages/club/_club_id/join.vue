@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5">
+  <div class="my-5">
     <v-container>
       <v-row justify="center" align="center">
         <v-col cols="12" sm="8">
@@ -177,6 +177,14 @@ export default {
       this.$axios
         .$post("/clubs/" + this.club_id + "/join", {
           student_id: this.student_number,
+          context: {
+            client: {
+              browserName: this.$browserDetect.meta.name,
+              browserVersion: this.$browserDetect.meta.version,
+              userAgent: this.$browserDetect.meta.ua,
+              language: window.navigator.language
+            }
+          }
         })
         .then((res) => {
           this.loading_btn = false;

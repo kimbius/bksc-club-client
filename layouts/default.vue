@@ -40,7 +40,7 @@
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+      <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
         fab
@@ -91,5 +91,8 @@ export default {
 <style>
 * {
   font-family: "Kanit", sans-serif;
+}
+.v-navigation-drawer__border {
+  opacity: 0;
 }
 </style>

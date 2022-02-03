@@ -3,7 +3,12 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  ssr: false,
+  loading: {
+    color: 'blue',
+    failedColor: 'red',
+    height: '2px'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - โรงเรียนบึงกาฬ',
@@ -41,6 +46,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    'vue-browser-detect-plugin/nuxt'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

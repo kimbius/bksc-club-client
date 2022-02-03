@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mt-5">
+    <div class="my-5">
       <v-container>
         <v-row justify="center" align="center">
           <v-col cols="12" sm="8">
@@ -47,7 +47,7 @@
                       <tbody>
                         <tr v-for="(item, i) in club_detail.members" :key="i">
                           <td>{{ i + 1 }}</td>
-                          <td><b-icon :class="(item.gender =='female' ? 'pink' : 'blue')+'--text'" icon="person-fill"></b-icon> {{ item.name }}</td>
+                          <td style="display:flex;align-items:center;"><b-icon style="margin-right:3px;" :class="(item.gender =='female' ? 'pink' : 'blue')+'--text'" icon="person-fill"></b-icon> {{ item.name }}</td>
                           <td>{{ item.room }}</td>
                         </tr>
                       </tbody>
